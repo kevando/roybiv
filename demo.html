@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>UnSupp0rted</title>
+	<meta name="description" content="A browser message for your customers that don't quite get it, yet.">
+	<meta name="keywords" content="unsupported browsers, browser error, ie7, internet explorer">
+	<meta name="author" content="Kevando">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel="image_src" type="image/png" src="/img/chew-btn.png">
+	<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<link href="/css/ie7.css" rel="stylesheet" media="screen">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap-tooltip.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css'>
+	<script src="/js/browser-detect.js"></script>
+	<script type="text/javascript">
+		jQuery(function ($) {
+			$('#beta').tooltip();
+			$('#feedback-header').popover({
+				html : true,
+				title : function(){
+					return $('.email-form-title').html();
+				},
+				content : function(){
+					return $('.email-form-content').html();
+				}
+			});
+			$('#feedback-info').popover({
+				html : true,
+				title : function(){
+					return $('.email-form-title').html();
+				},
+				content : function(){
+					return $('.email-form-content').html();
+				}
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-37398341-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	
+	
+</head>
+<body>
+    <div class="container-narrow">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+	      <li><a href="/">Home</a></li>
+          <li class="active" ><a href="/demo" target="_blank">Demo</a></li>
+          <li><a href="#" id="feedback-header" data-placement="bottom" >Feedback</a></li>
+        </ul>
+		 <ul class="nav nav-pills pull-left">
+	      <li>
+		   <a href="#" id="beta" data-placement="bottom" data-original-title="Things will likely change very quickly, add your email to stay up to date">Beta Version!</a>
+		 </li>
+		</ul>
+      </div>
+      <hr>
+      <div class="jumbotron">
+        <h1>UnSupp0rted</h1>
+        <p class="lead">A browser message for your customers that don't quite get it, yet.<br>
+		Right now we only support displaying this message to all users running all versions of Internet Explorer</p>
+<a href="#myModal" role="button" class="btn btn-large btn-success" data-toggle="modal">Get the Code Now!</a>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        <div class="span6">
+          <h4>What is UnSupp0rted?</h4>
+          <p>By placing this script on your site, you will be able to notify all Internet Explorer users their browser is out of date and your web site will function much better by using a more modern browser such as Firefox or Chrome.</p>
+
+          <h4>How do I install UnSupp0rted?</h4>
+          <p>I will have a screencast soon, but for now click the green button and follow those instructions. It's very simple'</p>
+
+          <h4>What are the most common web browser?</h4>
+          <p>Wikipedia has some stats and we compiled our own list in our first blog post. Oh wait, I didn't put a blog up yet</p>
+        </div>
+
+        <div class="span6">
+          <h4>Why Do I Want this Bight Banner on my site?</h4>
+          <p>You may not realize that you're losing conversions because your shopping cart experience looks awful in some browers and not functional in others.</p>
+
+          <h4>My Web Developer is Lazy</h4>
+          <p>That's not a question, but I hear you. It's very difficult to get support across all browsers and UnSupp0rted lets your customers know if they could experience issues</p>
+
+          <h4>Do you like this idea?</h4>
+          <p>I would love to expand this project and your ideas are critical to that. Please <a href="#feedback-info" id="feedback-info" data-placement="top" >shoot me a message</a> and I will follow up.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p><a href="http://www.kevinhabich.com">@Kevando</a></p>
+      </div>
+
+    </div> <!-- /container -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- Modals -->
+	
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">UnSupp0rted Installation Instructions</h3>
+		<p>Follow these quick and easy steps and all people that browse your site with Internet Explorer will see a nice banner directing them to use a more modern browser.</p>
+	  </div>
+	  <div class="modal-body">
+		<h4>Step 1: Copy the code snippet below</h4>
+	    <p><code>&lt;script src="http://code.jquery.com/jquery-latest.js"&gt;</script></code></p>
+	  </div>
+	  <div class="modal-body">
+		<h4>Step 2: Paste the snippet anywhere on the page. </h4>
+	    <p>By convention, place in the <code>&lt;head&gt;</code> with your other javascript files </p>
+	  </div>
+	  <div class="modal-body">
+		<h4>Step 3: Make sure the snippet gets placed on every page and clear your cache.</h4>
+	    <p>That's it! Go find your Uncle's computer and fire up Internet Explorer to see the banner.<br>
+		Compare it to <a href="/demo" target="_blank"> our demo</a> that shows the banner regardless of your browser. (Link will open in a new tab)
+		</p>
+	  </div>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	    <!--<button class="btn btn-primary">Save changes</button> -->
+	  </div>
+	</div>
+	
+	
+	<!-- Email model -->
+	<!-- Modal -->
+	<div id="myEmailModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">Feedback!</h3>
+	    <h4>I would love to hear what you think of this site!</h4>
+	  </div>
+	  <div class="modal-body">
+	    <form action="/email" method="post">
+		  <input type="text" name="subject" placeholder="Subject..."/><br>
+          <textarea <textarea rows="5" placeholder="Enter Text..." name="body"></textarea>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+	    <button class="btn btn-primary">Send</button>
+	</form>
+	  </div>
+	</div>
+	
+	<div id="myformIdTitle" class="hide email-form-title"><strong>Thank you for your input<strong></div>
+	<div id="myFormId" class="hide email-form-content">
+	    <form id="email-form" action="/email" method="post">
+		  <input type="text" name="email" placeholder="Email Address"/><br>
+          <textarea <textarea rows="5" placeholder="Question, Comment, Feature Request.." name="body"></textarea>
+	  <div class="modal-footer">
+	    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+	    <button class="btn btn-primary">Send</button>
+	</form>
+	</div>
+	
+	
+	
+</body>
+</html>
