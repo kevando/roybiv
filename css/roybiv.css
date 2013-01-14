@@ -1,33 +1,42 @@
 
 @import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
-body {background-color: #464646;padding: 0px;margin:0px;}
+body {padding: 0px;margin:0px;}
 
 h1 { color: white;font-size: 120px;text-shadow: 5px 5px 20px black;font-family: 'Londrina Sketch', cursive;font-weight:normal;}
 	
 
-.pane{height:200px;padding:100px 30px}
+.pane{height:200px;padding:100px 30px 300px 30px}
 
 h2,h4{font-size:26px;color:white;text-shadow: 2px 5px 17px #3A3A3A; }
-.top-navigation{width:100%;position:fixed;padding:30px;}
+.top-navigation{width:100%;position:fixed;padding:30px;height:50px;z-index:1}
 .top-navigation div {position:absolute;}
 #nav-logo{margin-left:200px;}
 #nav-green{left:685px;}
-#nav-green h4{color:#0C0;}
+#nav-green h4{color:#83bc78;}
 #nav-clientlogin{left:1120px;}
 #nav-contact{left:925px;}
 
-#pane-1 h1{margin-left:200px;padding-top:200px;}
+#pane-1{background:#464646;margin-bottom:0px;height:500px;/*-moz-box-shadow: 3px 3px 4px #000;-webkit-box-shadow: 3px 3px 4px #000;box-shadow: 3px 3px 4px #000;*/}
+#pane-1 h1{margin-left:200px;padding-top:200px;z-index:5}
 
-#finding-the-green{padding: 300px 300px;margin-top:200px}
+#finding-the-green{padding: 300px 300px;background:#B6B6B6;}
 #finding-the-green h4 {line-height:30px;text-align:center;}
-.link{cursor:pointer;text-decoration:none;color:#0C0}
+
+.link{cursor:pointer;text-decoration:none;color:#83bc78}
 .link a{color:white}
 .link:hover{text-decoration:underline;color:white;}
-.green{color:#0C0}
-.green:hover{color:#0C0}
+.green{color:#83bc78}
+.green:hover{color:#83bc78}
 .pane-1-content{height:200px;}
 #pane-1-tagline{margin-left:400px}
-.faded-top{position:fixed;width:100%;height:145px;background:  url('../img/top-nav-bg.png') repeat-x}
-
-#contact{padding:200px 34%;}
+/*.faded-top{position:fixed;width:100%;height:145px;background:  url('../img/top-nav-bg.png') repeat-x} */
+.drop-shadow{background: #B6B6B6 url('../img/top-nav-bg.png') 0px -26px repeat-x;
+width: 100%;
+height: 30px;
+position: relative;
+top: 0px;
+z-index:-10;
+}
+.green-bg{background-color:#83BC78;}
+#contact{padding:200px 34%;background-color:#83BC78}
 .email-form-content textarea,.email-form-content input{width:400px;}
