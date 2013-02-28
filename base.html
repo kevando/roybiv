@@ -21,118 +21,120 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/bootstrap-tooltip.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){
-    $("#nav-logo").hide();
-    $("#nav-green").hide();
-	$('#pane-1-tagline').css("marginTop","50px");
-    $('#pane-1-content h1').hide();
+<script src="/js/roybiv.js"></script>
 
 
-    $(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 270) {
-                $('#pane-1-logo').hide();
-	            $('#nav-logo').show();
-				$('#pane-1-tagline').css("marginTop","300px");
-	
-            } else {
-                $('#nav-logo').hide();
-				$('#pane-1-tagline').css("marginTop","50px");
-				$('#pane-1-logo').show();
-                
-
-            }
-			if ($(this).scrollTop() > 360) {
-	           $('#nav-green').show();
-	           $('#green-link').hide();
-	       } else {
-	           	$('#nav-green').hide();
-	           	$('#green-link').show();
-	       }
-			if ($(this).scrollTop() > 960) {
-	           $('#nav-green h4').css("color","rgb(70, 70, 70)");
-	           $('#nav-contact h4').css("color","#83bc78");
-	       } else {
-	           	$('#nav-green h4').css("color","#83bc78");
-	           	$('#nav-contact h4').css("color","rgb(70, 70, 70)");
-	       }
-
-        });
-	
-
-    });
-
-	    $('#green-link').click(function(){ 
-			$('html, body').animate({
-			    scrollTop: $("#finding-the-green").offset().top
-			 }, 1000);
-	    });
-	    
-		$('#nav-green').click(function(){ 
-			$('html, body').animate({
-			    scrollTop: $("#finding-the-green").offset().top
-			 }, 1000);
-	    });
-
-	
-		$('#nav-contact h4').click(function(){ 
-			$('html, body').animate({
-			    scrollTop: $("#contact").offset().top
-			 }, 1000);
-	    });
-	
-		$('#nav-logo h1').click(function(){ 
-			$('html, body').animate({scrollTop: 0}, 1000);
-	    });
-	
-	
-	});
-
-
-</script>
 
 </head> 
 <body> 
+	
+	<!-- 		NAVIGATION		-->
+	
 	<div id="nav" class="top-navigation">
-		<div id="nav-logo" class="link"><img src="/img/green-logo.png" /></div>
-		<div id="nav-green" class="link"><h4>Green</h4></div>
-		<div id="nav-contact" class="link"><h4>Contact</h4></div>
-		<div id="nav-clientlogin" class="link"><h4><a href="http://redmine.roybiv.net" target="_blank">Client Login</a></h4></div>
+		<div id="nav-logo"><img src="/img/green-logo-2.png" /></div>
+		<div id="nav-green" class="link"><p>Green</p></div>
+		<div id="nav-contact" class="link"><p>Contact</p></div>
+		<div id="nav-jobs" class="link"><p><a href="/jobs">Jobs</a></p></div>
+		<div id="nav-clientlogin" class="link"><p><a href="http://redmine.roybiv.net" target="_blank">Client Login</a></p></div>
 	</div>
 
+	<!-- 		FIRST PANE		-->
+	
 	<div id="pane-1" class='pane'>
 		<div class='pane-1-content'>
-			<h1 id="pane-1-logo"><img src="/img/green-logo.png" /></h1>
-			<h2 id="pane-1-tagline">Helping you find the <span id="green-link" class="link green">Green</span></h2>
+			<h1 id="pane-1-logo"><img src="/img/green-logo-2.png" /></h1>
+			<p id="pane-1-tagline">Helping you find the <span id="green-link" class="link green">Green</span></p>
 		</div>
 	</div>
-	<div class="drop-shadow"></div>
-	<div class='pane' id="finding-the-green">
-		<h4>
-			
-			roybiv is a small web agency that specializes in eCommerce consulting and eCommerce development.
-			We encourage our clients to use the Magento platform and provide assistance with SEO, PPC, 
-			product feeds, improved performance. 
-		</h4>
-	</div>
-	<div class="drop-shadow"></div>
-	<div class='pane' id="contact">
-		
-		<h2><strong>Send a Message to roybiv</strong></h2>
-		<div id="myFormId" class="email-form-content">
-		    <form id="email-form" action="/email" method="post">
-			  <input type="text" name="email" placeholder="Your Email Address"/><br>
-			  <input type="text" name="domain" placeholder="Your Website URL (Optional)"/><br>
-	          <textarea <textarea rows="5" placeholder="Tell us about your company..." name="body"></textarea>
-		  <div>
-		    <button class="btn btn-primary">Send</button>
-		</form>
+	
+	<!-- 		SECOND PANE		-->
+	
+	<div class='pane pane-2' id="finding-the-green">
+		<div class="content-row">
+			<div class="col-r cnt">
+				<h2>Helping Your Company Find Success</h2>
+				<p>roybiv is a small web agency that specializes in eCommerce consulting and eCommerce development.
+				We encourage our clients to use the Magento platform and provide assistance with SEO, PPC, 
+				product feeds, improved performance. We also work closely to get the best data analysis from
+				your website visitors.</p>
+			</div>
+			<div class="col-l cnt">
+				<h2>Who are We?</h2>
+				<p>We are a group of creative developers, designers, UX experts based in Chicago with 
+				employees all over the world. Our clients love us, and view our relationship like a partnership. 
+				We put awesome things on the internet and look forward to the opportunity to work with you.</p>
+			</div>
 		</div>
+	</div>
 
-	</div>
+	<!-- 		THIRD PANE		-->
+	
+	<div class="pane pane-3" id="ajax-contact">
+		<div class="contact-container">
+			<h2>Contact Form</h2>
+		
+			<div class="giant-button" data-toggle="tooltip">
+
+			</div>
+			<div class="input-container">
+				<form id="ajax-contact-form">
+					<input id="name" type="text" name="name" placeholder="Your Name " type="text" required/>
+					<input id="email" type="text" name="email" placeholder="Your Email Address" type="email" required/>
+					<textarea id="styled" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')" placeholder="Tell us about your company..." name="body"></textarea>						
+				</form> 
+				<p class='thank-you' style='display:none'>Thank you for getting in touch, we'll respond soon!</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+		function setbg(color)
+		{
+		document.getElementById("styled").style.background=color
+		}
+			jQuery('.giant-button').tooltip({
+				placement:'left',
+				delay: { show: 100, hide: 5500 },
+				title: 'Click anywhere on the button to submit your form!'
+			});
+			jQuery(document).ready(function() {
+				var data = {"tw":"twitter"};
+				
+				jQuery('.giant-button').click(function(){
+               
+					    if( !$('#ajax-contact-form input').val() ) {
+					         return true;    
+					    }
+						$(this).css({'background-color': '#ffe', 'box-shadow' : '0 0 3px #333333'})
+
+					console.log('button clicked');
+		       	 	jQuery.ajax({
+			  			url: "/email",
+			  			type: 'POST',
+			  			data: $("#ajax-contact-form").serialize(),
+			  			success: function(data, status){
+			    			//check status
+			    			console.log('fresh');
+							jQuery('.input-container input').fadeOut(1000);
+							jQuery('.input-container .disclaimer').fadeOut(1000);
+							jQuery('.input-container textarea').fadeOut(1000);
+							jQuery('.thank-you').delay(1000).fadeIn(1000);
+							
+			  			}
+					});
+				});
+			});
+		</script>
+
 
 	
+	<!-- 		FOOTER		
+	<div id="footer" class="footer-navigation">
+		<div id="foot-green" class="link"><p>Green</p></div>
+		<div id="foot-contact" class="link"><p>Contact</p></div>
+		<div id="foot-jobs" class="link"><p>Jobs</p></div>
+		<div id="foot-clientlogin" class="link"><p><a href="http://redmine.roybiv.net" target="_blank">Client Login</a></p></div>
+	</div>
+	
+	-->
 	
 </body> 
 </html>
