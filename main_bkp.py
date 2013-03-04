@@ -16,28 +16,40 @@
 #
 import cgi
 import webapp2
-#import random
+import random
 import os
 from google.appengine.ext.webapp import template
+from google.appengine.api import users
 import datetime
-#import urllib
+import urllib
 from google.appengine.ext import db
+from google.appengine.api import users
 from google.appengine.api import mail
-#import urllib2
+import urllib2
 import pprint # for var dumping
-#import json
-#import sys
+import json
+import sys
 import logging
 
 
+# Define Model
+class Visitor(db.Model):
+    name = db.StringProperty(multiline=True)
+    twitter = db.StringProperty(multiline=False)
+    google = db.StringProperty(multiline=False)
+    facebook = db.StringProperty(multiline=False)
+    ip = db.StringProperty(multiline=False)
+    facebookid = db.IntegerProperty()
+    date = db.DateTimeProperty(auto_now_add=True)
+	
 
 # Landing function
 class MainHandler(webapp2.RequestHandler):
 	def get(self):	
 		
+		logVisitorData('no IP Data yet')
 		templateValues = {'placeholder':'Enter Human Language'}
-		path = os.path.join(os.path.dirname(__file__), 'main.html')
-#		path = os.path.join(os.path.dirname(__file__), 'base.html')
+		path = os.path.join(os.path.dirname(__file__), 'base.html')
 		self.response.out.write(template.render(path, templateValues))
 
 # Landing function
@@ -47,6 +59,40 @@ class JobsHandler(webapp2.RequestHandler):
 		path = os.path.join(os.path.dirname(__file__), 'jobs.html')
 		self.response.out.write(template.render(path, templateValues))
 
+
+# Landing function
+class StatsHandler(webapp2.RequestHandler):
+	
+	def get(self):	
+		
+		#get all visitors
+		visitors= Visitor.all()
+		
+		
+		templateValues = {'visitors':visitors,'result':'result'}
+		path = os.path.join(os.path.dirname(__file__), 'stats.html')
+		self.response.out.write(template.render(path, templateValues))
+		
+		
+		
+	def post(self):
+		twitter = cgi.escape(self.request.get('tw'))
+		google = cgi.escape(self.request.get('goo'))
+		facebook = cgi.escape(self.request.get('fb'))
+		
+		Visitor(
+			name='frank test',
+			twitter = twitter,
+			google = google,
+			facebook = facebook,
+		    ip = self.request.remote_addr,
+		    facebookid = 2342,
+			).put()
+
+
+		templateValues = {'twitter':'duuuude'}
+		path = os.path.join(os.path.dirname(__file__), 'stats.html')
+		self.response.out.write(template.render(path, templateValues))
 
 # Email 		
 class EmailHandler(webapp2.RequestHandler):
@@ -61,8 +107,20 @@ class EmailHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
 	('/email', EmailHandler),    
+	('/stats', StatsHandler),    
 	('/jobs', JobsHandler),    
 	('/', MainHandler)
 	
 ], debug=True)
+
+
+def logVisitorData(ip):
+	Visitor(
+		name='frank test',
+		twitter = 'twitter',
+		google = 'google',
+		facebook = 'facebook',
+	    ip = ip,
+	    facebookid = 2342,
+		).put()
 
