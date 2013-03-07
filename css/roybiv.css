@@ -1,3 +1,12 @@
+@font-face {
+	font-family: "Junction";
+	src: url("Junction-webfont.eot");
+	src: url('Junction-webfont.eot?#iefix') format('embedded-opentype'), 
+	     url('Junction-webfont.woff') format('woff'), 
+	     url('Junction-webfont.ttf')  format('truetype'),
+	     url('Junction-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+
 td{
 	border:dotted 1px black;
 	padding:5px;
@@ -26,107 +35,96 @@ td{
 .top-navigation div {position:absolute;}
 
 #pane-1{
-
 margin-bottom:0px;height:750px;/*-moz-box-shadow: 3px 3px 4px #000;-webkit-box-shadow: 3px 3px 4px #000;box-shadow: 3px 3px 4px #000;*/}
-#pane-1 h1{margin-left:80px;padding-top:200px;z-index:5}
 
 
-.link{cursor:pointer;text-decoration:none;color:#83bc78}
-.link a{color:rgb(70, 70, 70)}
-.green{color:#83bc78}
-.green:hover{color:#83bc78}
+.link{cursor:pointer;text-decoration:none;color:#83bc78;font-weight:bold}
+.link a,.link p{color:#464646;}
+.green{color:#83bc78;font-weight:bold}
+.green:hover{color:#83bc78;}
 
-
-
-.pane-1-content{height:200px;}
-.pane-1-content h1 {position:relative;z-index:55;}
-#green-link{position:relative;z-index:55;}
-
-
-#pane-1-tagline{margin-left:388px}
-
-/*.faded-top{position:fixed;width:100%;height:145px;background:  url('../img/top-nav-bg.png') repeat-x} */
-.drop-shadow{background: rgb(121, 121, 121);
-width: 100%;
-height: 5px;
-position: relative;
-top: 0px;
-z-index:-10;
-}
-.green-bg{background-color:#83BC78;}
-.email-form-content textarea,.email-form-content input{width:400px;}
-
-@import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
 
 /* Global */
 body {padding: 0px;margin:0px;background-color:#303030;}
-
 ::selection{background: black;color: white;text-shadow: none;}
 
 /* Text */ 
-p,li {font-family: 'Helvetica', sans-serif;color: #484848;font-size: 26px;font-weight: 300;line-height: 35px;letter-spacing: -1px;}
-p .large-text{font-size: 32px;margin: 0 0 37px 0;line-height: 0;letter-spacing: -1px;font-weight:bold}
-li{list-style:none;font-size:20px;}
-/*.link p{font-size:1.5em} */
-h1,h2,h3,h4{font-size:26px;color:#484848;text-shadow: 3px 3px 2px lightGrey; }
-h1{font-size:40px;color:#484848;;text-shadow: 3px 3px 3px lightGrey;margin-top:30px; }
+
+h1,h2,h3,h4,p,li{font-size:100px;color:red;font-family: 'Junction' , fallback }
+h1{font-size:40px;color:#484848;margin-top:30px; }
+h2{font-size:50px;color:#333333}
+h3{font-size:30px;color:#333333}
 h4{font-size:20px}
+p{color:#C3C7C4;font-size:20px;line-height:24px}
+li{list-style:none;font-size:20px;}
+
 a:hover{text-decoration:none;}
 
 
 /* Containers */
 
 .pane{}
-.pane-1{padding:100px 0px 300px 0px}	
-.pane-2{height:900px;}
-.pane-2-content{background:red;width:1400px;margin:0 auto;}
 
-.pane-3{height:600px;padding: 10px 0px;background:white}
+.pane-1-content{float:left;margin:200px 0px 0px 130px;width:460px}
+.pane-1-content .main-logo {float:left}
+.pane-1-content .main-tagline {width:145px;float:right;margin:18px 0px 0px 30px}
+.uncover-more{float: left;
+	position: absolute;
+	left: 470px;
+	top: 450px;
+
+}
+.pane-2{height:950px;}
+.pane-2-content{width:1100px;margin:0 auto;}
+
+.pane-3{height:600px;padding: 100px 0px;background:white}
 .pane-jobs{padding:150px 200px}
-.top-navigation{background: #F0F0F0;width:100%;position:fixed;padding:0px 0px;height:100px;z-index:1;opacity:0.9}
+.top-navigation{position:fixed;padding:0px 0px;height:100px;z-index:1;opacity:0.9}
 .top-navigation .link {margin-top:32px}
-.footer-navigation{background:green;width:100%;position:absolute;padding:0px 0px;height:100px;z-index:1;}
-.footer-navigation li {margin-top:0px;float:left}
+#nav{background: #F0F0F0;width:100%;}
 
-.pane-2 div{border:solid 1px black}
+.footer-navigation{width:100%;background:#333333;position:absolute;padding:10px 0px;height:40px;z-index:1;}
+.footer-content{width:600px;margin:0 auto}
+.footer-navigation li {margin:0px 10px;float:left}
+.footer-navigation li a{color:#C3C7C4}
+
+.pane-2 div{border:solid 0px black}
 
 
 #nav-overlay{background:red;z-index:5;width:100%;position:fixed;padding:0px 0px;height:100px;}
-#nav-logo{margin-left:80px;}
-#nav-green{left:605px;}
-#nav-jobs{left:725px;}
+#nav-logo{margin-left:130px;}
+#nav-green{left:526px;}
+#nav-jobs{left:676px;}
 #nav-green p{color:#83bc78;}
 #nav-clientlogin{left:970px;}
-#nav-contact{left:837px;}
+#nav-contact{left:800px;}
 
-.content-row{border:solid 0px red;height:530px;}
-.col-r{float:right;width:650px;}
-.col-l{float:left;width:650px;}
-.content-row .cnt{padding:0px; width: 650px;}
+.content-row{border:solid 0px red;height:360px;}
+.col-r{float:right;width:500px;}
+.col-l{float:left;width:500px;}
+.content-row .cnt{padding:0px;}
 .content-row .img{padding:0px}
-.content-row li{float: left;}
-.data-image{}
-.contact-container{	width: 383px;margin: 0 auto;border:solid 1px green;}
+.content-row .img img {position:relative}
+.content-row .img .dev {margin-left:-150px}
+.content-row .img .design {margin-left:-160px}
+.content-row .img .ux {position:relative}
+
+.content-row li{float: left;margin: 10px 40px 10px 40px;cursor:pointer;}
+.graph{position:absolute}
+.graph-question{cursor:pointer;width:25px;height:25px;border:solid 0px blue; top:116px;left:145px;position:relative;float:left}
+.contact-container{	width: 500px;margin: 0 auto;border:solid 1px green;}
 
 
-
-.tooltip-inner {
-font-size:15px;
-max-width: 120px;
-padding: 9px 15px;
-color: white;
-text-align: center;
-background-color: black;
-}
 /* custom contact form */ 
 
 	.input-container{
 	border-radius:8px;
 }
-	
-	.input-container input{width:286px;border-radius:5px}
-	.input-container textarea{width:286px;height:208px;resize: none;border-radius:5px}
-	.input-container form{width:100px;}
+	.contact-container{padding:20px;box-shadow: 10px 10px 0px #19AD19;}
+	.input-container input{width: 480px;border-radius: 0px;margin: 10px 0px;border:solid 1px black}
+	.input-container textarea{width: 480px;height: 150px;resize: none;border-radius:0px;margin: 10px 0px;border:solid 1px black}
+	.input-container input[type=button]{background:white;width: 140px;
+	height: 30px;border:solid 1px green}
 	.disclaimer{color: #484848;font-size: 14px;letter-spacing: 0px;width: 224px;height:0px}
 		
 		

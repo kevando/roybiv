@@ -1,0 +1,100 @@
+reddit over used error
+
+
+INFO     2013-03-04 01:35:01,014 reddit.py:75] geek
+WARNING  2013-03-04 01:35:03,061 urlfetch_stub.py:453] Stripped prohibited headers from URLFetch request: ['Host']
+ERROR    2013-03-04 01:35:03,682 webapp2.py:1552] HTTP Error 404: Not Found
+Traceback (most recent call last):
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1535, in __call__
+    rv = self.handle_exception(request, response, e)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1529, in __call__
+    rv = self.router.dispatch(request, response)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1278, in default_dispatcher
+    return route.handler_adapter(request, response)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1102, in __call__
+    return handler.dispatch()
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 572, in dispatch
+    return self.handle_exception(e, self.app.debug)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 570, in dispatch
+    return method(*args, **kwargs)
+  File "/Users/k/Work/www/side_projects/bigtimefresh/appengine/reddit.py", line 78, in get
+    getSubredditData(subreddit)
+  File "/Users/k/Work/www/side_projects/bigtimefresh/appengine/reddit.py", line 247, in getSubredditData
+    f = opener.open(url)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 400, in open
+    response = meth(req, response)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 513, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 438, in error
+    return self._call_chain(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 372, in _call_chain
+    result = func(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 521, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 404: Not Found
+INFO     2013-03-04 01:35:03,743 dev_appserver.py:3104] "GET /reddit/getdata HTTP/1.1" 500 -
+INFO     2013-03-04 01:35:03,880 dev_appserver.py:3104] "GET /favicon.ico HTTP/1.1" 200 -
+INFO     2013-03-04 01:35:34,283 reddit.py:75] geek
+WARNING  2013-03-04 01:35:36,287 urlfetch_stub.py:453] Stripped prohibited headers from URLFetch request: ['Host']
+ERROR    2013-03-04 01:35:37,134 webapp2.py:1552] HTTP Error 429: Unknown
+Traceback (most recent call last):
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1535, in __call__
+    rv = self.handle_exception(request, response, e)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1529, in __call__
+    rv = self.router.dispatch(request, response)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1278, in default_dispatcher
+    return route.handler_adapter(request, response)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 1102, in __call__
+    return handler.dispatch()
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 572, in dispatch
+    return self.handle_exception(e, self.app.debug)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/lib/webapp2-2.5.2/webapp2.py", line 570, in dispatch
+    return method(*args, **kwargs)
+  File "/Users/k/Work/www/side_projects/bigtimefresh/appengine/reddit.py", line 78, in get
+    getSubredditData(subreddit)
+  File "/Users/k/Work/www/side_projects/bigtimefresh/appengine/reddit.py", line 247, in getSubredditData
+    f = opener.open(url)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 400, in open
+    response = meth(req, response)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 513, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 438, in error
+    return self._call_chain(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 372, in _call_chain
+    result = func(*args)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/urllib2.py", line 521, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 429: Unknown
+INFO     2013-03-04 01:35:37,144 dev_appserver.py:3104] "GET /reddit/getdata HTTP/1.1" 500 -
+INFO     2013-03-04 01:35:37,246 dev_appserver.py:3104] "GET /favicon.ico HTTP/1.1" 200 -
+INFO     2013-03-04 01:40:24,192 reddit.py:75] geek
+INFO     2013-03-04 01:40:26,193 reddit.py:242] starting fresh
+INFO     2013-03-04 01:40:26,265 dev_appserver.py:3104] "GET /reddit/getdata HTTP/1.1" 200 -
+INFO     2013-03-04 01:40:26,348 dev_appserver.py:3104] "GET /css/bootstrap.min.css HTTP/1.1" 200 -
+INFO     2013-03-04 01:40:26,378 dev_appserver.py:3104] "GET /css/bootstrap-responsive.min.css HTTP/1.1" 304 -
+INFO     2013-03-04 01:40:26,406 dev_appserver.py:3104] "GET /css/btf.css HTTP/1.1" 304 -
+INFO     2013-03-04 01:40:26,454 dev_appserver.py:3104] "GET /js/bootstrap.min.js HTTP/1.1" 304 -
+INFO     2013-03-04 01:40:26,947 dev_appserver.py:3104] "GET /favicon.ico HTTP/1.1" 200 -
+ERROR    2013-03-04 01:40:43,344 wsgi.py:219] 
+Traceback (most recent call last):
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/runtime/wsgi.py", line 196, in Handle
+    handler = _config_handle.add_wsgi_middleware(self._LoadHandler())
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/runtime/wsgi.py", line 255, in _LoadHandler
+    handler = __import__(path[0])
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/tools/dev_appserver_import_hook.py", line 692, in Decorate
+    return func(self, *args, **kwargs)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/tools/dev_appserver_import_hook.py", line 1766, in load_module
+    return self.FindAndLoadModule(submodule, fullname, search_path)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/tools/dev_appserver_import_hook.py", line 692, in Decorate
+    return func(self, *args, **kwargs)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/tools/dev_appserver_import_hook.py", line 1630, in FindAndLoadModule
+    description)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/tools/dev_appserver_import_hook.py", line 692, in Decorate
+    return func(self, *args, **kwargs)
+  File "/Applications/GoogleAppEngineLauncher.app/Contents/Resources/GoogleAppEngine-default.bundle/Contents/Resources/google_appengine/google/appengine/tools/dev_appserver_import_hook.py", line 1577, in LoadModuleRestricted
+    description)
+  File "/Users/k/Work/www/side_projects/bigtimefresh/appengine/reddit.py", line 34, in <module>
+    import praw #Reddit wrapper
+ImportError: No module named praw
+INFO     2013-03-04 01:40:44,182 dev_appserver.py:3104] "GET /reddit/getdata HTTP/1.1" 500 -
+INFO     2013-03-04 01:40:44,297 dev_appserver.py:3104] "GET /favicon.ico HTTP/1.1" 200 -
