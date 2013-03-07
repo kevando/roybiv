@@ -34,9 +34,7 @@ td{
 
 .top-navigation div {position:absolute;}
 
-#pane-1{
-margin-bottom:0px;height:750px;/*-moz-box-shadow: 3px 3px 4px #000;-webkit-box-shadow: 3px 3px 4px #000;box-shadow: 3px 3px 4px #000;*/}
-
+#pane-1{margin-bottom:0px;height:750px;}
 
 .link{cursor:pointer;text-decoration:none;color:#83bc78;font-weight:bold}
 .link a,.link p{color:#464646;}
@@ -52,11 +50,11 @@ body {padding: 0px;margin:0px;background-color:#303030;}
 
 h1,h2,h3,h4,p,li{font-size:100px;color:red;font-family: 'Junction' , fallback }
 h1{font-size:40px;color:#484848;margin-top:30px; }
-h2{font-size:50px;color:#333333}
+h2{font-size:50px;color:#FFF}
 h3{font-size:30px;color:#333333}
-h4{font-size:20px}
+h4{font-size:20px;color:#333}
 p{color:#C3C7C4;font-size:20px;line-height:24px}
-li{list-style:none;font-size:20px;}
+li{list-style:none;font-size:20px;color:#333;line-height:29px}
 
 a:hover{text-decoration:none;}
 
@@ -66,25 +64,27 @@ a:hover{text-decoration:none;}
 .pane{}
 
 .pane-1-content{float:left;margin:200px 0px 0px 130px;width:460px}
-.pane-1-content .main-logo {float:left}
+.pane-1-content .main-logo {float:left;width: 283px;
+height: 81px;}
 .pane-1-content .main-tagline {width:145px;float:right;margin:18px 0px 0px 30px}
 .uncover-more{float: left;
 	position: absolute;
 	left: 470px;
-	top: 450px;
+	top: 550px;
+	cursor:pointer;
 
 }
-.pane-2{height:950px;}
-.pane-2-content{width:1100px;margin:0 auto;}
+.pane-2{height:625px;background:#333;}
+.pane-2-content{width:1100px;margin:0 auto;background:#333;}
 
 .pane-3{height:600px;padding: 100px 0px;background:white}
 .pane-jobs{padding:150px 200px}
-.top-navigation{position:fixed;padding:0px 0px;height:100px;z-index:1;opacity:0.9}
+.top-navigation{position:fixed;padding:0px 0px;height:83px;z-index:1;opacity:0.9}
 .top-navigation .link {margin-top:32px}
 #nav{background: #F0F0F0;width:100%;}
 
 .footer-navigation{width:100%;background:#333333;position:absolute;padding:10px 0px;height:40px;z-index:1;}
-.footer-content{width:600px;margin:0 auto}
+.footer-content{width:400px;margin:0 auto}
 .footer-navigation li {margin:0px 10px;float:left}
 .footer-navigation li a{color:#C3C7C4}
 
@@ -92,12 +92,12 @@ a:hover{text-decoration:none;}
 
 
 #nav-overlay{background:red;z-index:5;width:100%;position:fixed;padding:0px 0px;height:100px;}
-#nav-logo{margin-left:130px;}
+#nav-logo{margin-left:130px;cursor:pointer}
 #nav-green{left:526px;}
 #nav-jobs{left:676px;}
 #nav-green p{color:#83bc78;}
 #nav-clientlogin{left:970px;}
-#nav-contact{left:800px;}
+.nav-contact{left:800px;}
 
 .content-row{border:solid 0px red;height:360px;}
 .col-r{float:right;width:500px;}
@@ -117,15 +117,21 @@ a:hover{text-decoration:none;}
 
 /* custom contact form */ 
 
-	.input-container{
-	border-radius:8px;
-}
 	.contact-container{padding:20px;box-shadow: 10px 10px 0px #19AD19;}
-	.input-container input{width: 480px;border-radius: 0px;margin: 10px 0px;border:solid 1px black}
+	.input-container input{width: 480px;border-radius: 0px;margin: 10px 0px;border:solid 1px black}	
 	.input-container textarea{width: 480px;height: 150px;resize: none;border-radius:0px;margin: 10px 0px;border:solid 1px black}
-	.input-container input[type=button]{background:white;width: 140px;
-	height: 30px;border:solid 1px green}
+	.input-container input[type=button]{background:white;width: 140px;height: 30px;border:solid 1px green}
 	.disclaimer{color: #484848;font-size: 14px;letter-spacing: 0px;width: 224px;height:0px}
+	
+	
 		
 		
+		
+@media only screen and (max-device-width: 480px) {	
+	
+	body{background:white}
+	h1,h2,h3,h4,p,li{font-family: 'Helvetica' }
+	
+	.pane-2 {height:1000px;background-color:#333;width:1100px};
+}		
 		

@@ -6,7 +6,9 @@ $(document).ready(function(){
     $('#pane-1-content h1').hide();
 	$('.top-navigation').hide();
 	$('.uncover-more').hide();
-	$('.uncover-more').delay(800).fadeIn(800);
+	$('.main-tagline').hide();
+	$('.main-tagline').delay(600).fadeIn(600);
+	$('.uncover-more').delay(3000).fadeIn(1500);
 
 	$('.content-row .img .ux').hide();
 	$('.content-row .img .design').hide();
@@ -30,10 +32,10 @@ $(document).ready(function(){
 			// 'green' reaches nav bar
 			if ($(this).scrollTop() > 300) {
 	           $('#nav-green').show();
-	           $('#green-link').hide();
+	           $('.green-link').hide();
 	       } else {
 	           	$('#nav-green').hide();
-	           	$('#green-link').show();
+	           	$('.green-link').show();
 	       }
 			// page reaches 2nd pane, animate the content
            if ($(this).scrollTop() > 890) {
@@ -44,18 +46,27 @@ $(document).ready(function(){
 			// Set navbar for certain conditions
 			if ($(this).scrollTop() > 960) {
 	           $('#nav-green h4').css("color","rgb(70, 70, 70)");
-	           $('#nav-contact h4').css("color","#83bc78");
 	       } else {
 	           	$('#nav-green h4').css("color","#83bc78");
-	           	$('#nav-contact h4').css("color","rgb(70, 70, 70)");
 	       }
 
         });
 	
+	// For media query style things
+	$(window).resize(function() {
+		var width = $(window).width();
+		if (width < 1500) {
+			$('.content-row .img .ux').show();
+			$('.content-row .img .design').show();
+			$('.content-row .img .dev').show();		}
+		else {
+			//Do Something Else
+		}
+	});
 
     });
 
-	    $('#green-link').click(function(){ 
+	    $('.green-link').click(function(){ 
 			$('html, body').animate({
 			    scrollTop: $("#finding-the-green").offset().top
 			 }, 1000);
@@ -68,13 +79,13 @@ $(document).ready(function(){
 	    });
 
 	
-		$('#nav-contact p').click(function(){ 
+		$('.nav-contact').click(function(){ 
 			$('html, body').animate({
 			    scrollTop: $("#ajax-contact").offset().top
 			 }, 1000);
 	    });
 	
-		$('#nav-logo h1').click(function(){ 
+		$('#nav-logo').click(function(){ 
 			$('html, body').animate({scrollTop: 0}, 1000);
 	    });
 	
