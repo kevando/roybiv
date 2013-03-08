@@ -4,61 +4,67 @@
 
 	
 	<!-- 		NAVIGATION		-->
-	
 	<div id="nav" class="top-navigation">
-		<div id="nav-logo"><img src="/img/green-logo-2.png" /></div>
 		<div id="nav-green" class="link"><p>Green</p></div>
-		<div id="nav-contact" class="link"><p>Contact</p></div>
+		<div class="link nav-contact"><p>Contact</p></div>
 		<div id="nav-jobs" class="link"><p><a href="/jobs">Jobs</a></p></div>
 		<div id="nav-clientlogin" class="link"><p><a href="http://redmine.roybiv.net" target="_blank">Client Login</a></p></div>
+		
 	</div>
+	<div id="nav-logo" class="top-navigation"><img src="/img/roybiv_logo.png" /></div>
 
 	<!-- 		FIRST PANE		-->
 	
 	<div id="pane-1" class='pane'>
 		<div class='pane-1-content'>
-			<h1 id="pane-1-logo"><img src="/img/green-logo-2.png" /></h1>
-			<p id="pane-1-tagline">Helping you find the <span id="green-link" class="link green">Green</span></p>
+			
+			<!-- <h1 id="pane-1-logo"><img src="/img/green-logo-2.png" /></h1> -->
+			<img src="/img/roybiv_logo.png" class="main-logo" />
+			<p class="main-tagline">Helping you find the <span class="link green green-link">Green</span></p>		
 		</div>
+		<div class="uncover-more green-link"><img src="/img/uncovermore_arrow.png" /></div>
+		
 	</div>
 	
 	<!-- 		SECOND PANE		-->
 	
 	<div class='pane pane-2' id="finding-the-green">
-		<div class='pane pane-2-content'>
+		<div class='pane-2-content'>
 			<div class="content-row">
 				<div class="col-l cnt">
 					<h2>Who are We?</h2>
-					<h3>Not as weird as we look</h3>
 					<p>roybiv is a small web agency that specializes in eCommerce consulting and eCommerce development.
 					We encourage our clients to use the Magento platform and provide assistance with SEO, PPC, 
 					product feeds, improved performance. We also work closely to get the best data analysis from
 					your website visitors.</p>
 					<ul>
-						<li><img src="/img/fb_no_photo.jpg"></li>
-						<li><img src="/img/fb_no_photo.jpg"></li>
-						<li><img src="/img/fb_no_photo.jpg"></li>
+						<li><img class="ux" src="/img/icon_iaux.png"></li>
+						<li><img class="design" src="/img/icon_design.png"></li>
+						<li><img class="dev" src="/img/icon_dev.png"></li>
 					</ul>
 				</div>
 				<div class="col-r img">
-					<img src="/img/social_hero.png">
+					<img class="ux" src="/img/image_ux.png">
+					<img class="design" src="/img/image_design.png">
+					<img class="dev" src="/img/image_dev.png">
 				</div>
 			</div>
 		
 			<div class="content-row">
 				<div class="col-r cnt">
 						<h2>What we do</h2>
-						<h3>(make you more money)</h3>
 						<p>roybiv is a small web agency that specializes in eCommerce consulting and eCommerce development.
 						We encourage our clients to use the Magento platform and provide assistance with SEO, PPC, 
 						product feeds, improved performance. We also work closely to get the best data analysis from
 						your website visitors.</p>
 					
-						<h4>To find out more CONTACT US</h4>
+						<!--<h4>To find out more CONTACT US</h4>-->
 					
 				</div>
 				<div class="col-l cnt">
-					<img src="/img/social_hero.png">
+					<img class="graph graph-empty" src="/img/graph_1.png">
+					<img class="graph graph-details" src="/img/graph_questionmark_arrows.png">
+					<span class="graph-question"></span>
 				</div>
 			</div>
 		</div>
@@ -68,15 +74,15 @@
 	
 	<div class="pane pane-3" id="ajax-contact">
 		<div class="contact-container">
-			<h2>Find Out More...</h2>
+			<h3>Find Out More...</h3>
 			<div class="input-container">
 				<form id="ajax-contact-form">
 					<input id="name" type="text" name="name" placeholder="Your Name " type="text" required/>
 					<input id="email" type="text" name="email" placeholder="Your Email Address" type="email" required />
 					<textarea id="styled" placeholder="Tell us about your company..." name="body"></textarea>	
-					<input type="button" value="Submit" class="contact-button"/>					
+					<input type="button" value="SUBMIT" class="contact-button"/>					
 				</form> 
-				<h2 class='thank-you' style='display:none'>Thank you for getting in touch, we'll respond soon!</h2>
+				<h3 class='thank-you' style='display:none'>Thank you for getting in touch, we'll respond soon!</h3>
 			</div>
 		</div>
 	</div>
@@ -86,15 +92,16 @@
 		{
 		document.getElementById("styled").style.background=color
 		}
+			/* not used at the moment
 			jQuery('.giant-button').tooltip({
 				placement:'left',
 				delay: { show: 100, hide: 5500 },
 				title: 'Click anywhere on the button to submit your form!'
-			});
+			}); */
 			jQuery(document).ready(function() {
 				var data = {"tw":"twitter"};
 				
-				jQuery('.giant-button').click(function(){
+			jQuery('.contact-button').click(function(){
                
 					    if( !$('#ajax-contact-form input').val() ) {
 					         return true;    
